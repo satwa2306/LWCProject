@@ -1,0 +1,67 @@
+<template>
+    <lightning-card title="one-way/two or methods binding">
+        <lightning-input type="string" label="role" onkeyup={changeup}></lightning-input>
+        <header> Hi learn</header>
+        <div>{fullname}-{role}-{obj.rollno}</div>
+
+
+    </lightning-card>
+    <lightning-card title="track properties">
+        <lightning-input type="string" label="role" onkeyup={onchangeup}></lightning-input>
+        <header> Hi learn</header>
+        <div>{fullname}-{obj.city}</div>
+
+
+    </lightning-card>
+    <lightning-card title="getter">
+        <lightning-input type="string" label="role" onkeyup={onchangeup}></lightning-input>
+        <header> Hi learn</header>
+        <div>{fullname}-{obj.city}</div>
+        <div>{arry}</div>
+        <div>{num1} * {num2}-{muktipy}</div>
+
+    </lightning-card>
+
+    </lightning-card>
+    <lightning-card title="conditional renderning">
+        <lightning-input type="string" label="role" onkeyup={onchangeup1}></lightning-input>
+        <template if:true={value}>
+            <div>hurray</div>
+
+        </template>
+
+    </lightning-card>
+
+
+    <lightning-card title="loop renderning">
+    <div class="slds-var-m-around_medium">
+        <ul class="slds-has-dividers_around-space" >
+        <template for:each={users} for:item='user'>
+            
+                <li key={user} class="slds-item">{user}</li>
+           
+
+        </template> 
+         </ul>
+     </div>   
+    </lightning-card>
+
+    <lightning-card title="Looping for each">
+        <ul class="slds-has-dividers_around-space">
+            <template for:each={cars} for:item="car">
+                <li class="slds-item" key={car}>
+                    {car}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+    <lightning-card title="Looping for each">
+        <ul class="slds-has-dividers_around-space">
+            <template iterator:car={cars}>
+                <li class="slds-item" key={car}>
+                    {car.value}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
