@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="slots named named and unnamed">
+        <h3>what is my name?</h3>
+        <slot name="name"></slot>
+        <h3>what is my Age?</h3>
+        <slot name="age"></slot>
+        <footer class="slds-card__footer slds-hide">
+            <slot name="footer" onslotchange={handlechange}></slot>
+        </footer>
+    </lightning-card>
+</template>

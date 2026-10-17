@@ -1,43 +1,29 @@
 import { LightningElement } from 'lwc';
 
 export default class LifeCyclehookUnMoutingphase extends LightningElement {
-
-showchild=false
-handleClick(){
-
-
-    this.showchild=!(this.showchild)
-}
-
-    constructor(){
-
-        super()
-        console.log('hello from parent constructor')
-
+    showchild = false;
+    handleClick() {
+        this.showchild = !this.showchild;
     }
 
-
-    connectedCallback(){
-
-        console.log('hello from parent connectedCallback')
-
-       /*  throw new Error('loading child') */
-
+    constructor() {
+        super();
+        console.log('hello from parent constructor');
     }
 
-    renderedCallback(){
+    connectedCallback() {
+        console.log('hello from parent connectedCallback');
 
-
-
-        console.log('hello from parent renderedCallback')
-
+        /*  throw new Error('loading child') */
     }
-    errorCallback(error,stack){
+
+    renderedCallback() {
+        console.log('hello from parent renderedCallback');
+    }
+    /*     errorCallback(error,stack){
 
         console.log(error.message)
         console.log(stack)
 
-    }
-
-
+    } */
 }

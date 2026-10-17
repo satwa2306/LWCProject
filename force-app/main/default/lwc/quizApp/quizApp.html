@@ -1,42 +1,47 @@
 <template>
-
     <lightning-card title="Quiz App In LWC">
-        
         <div class="slds-p-around_small">
-           <form>
-            <template for:each={questions} for:item="questions">
-                <div key={questions.id} class="slds-m-bottom_medium">
-                    <strong>{questions.id}-{questions.question}</strong>
-                    <div class="slds-grid slds-gutters">
-                        <div class="slds-col slds-size_1-of-3">
-                            <input type="radio" name={questions.id} value="a" onchange={changehanlder}>
-                            {questions.answers.a}
-                        </div>
-                        <div class="slds-col slds-size_1-of-3">
-                            <input type="radio" name={questions.id} value="b" onchange={changehanlder}>
-                            {questions.answers.b} 
-                        </div>
-                        <div class="slds-col slds-size_1-of-3">
-                            <input type="radio" name={questions.id} value="c" onchange={changehanlder}>
-                            {questions.answers.c}
+            <form>
+                <template for:each={questions} for:item="questions">
+                    <div key={questions.id} class="slds-m-bottom_medium">
+                        <strong>{questions.id}-{questions.question}</strong>
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_1-of-3">
+                                <input type="radio" name={questions.id} value="a" onchange={changehanlder} />
+                                {questions.answers.a}
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <input type="radio" name={questions.id} value="b" onchange={changehanlder} />
+                                {questions.answers.b}
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <input type="radio" name={questions.id} value="c" onchange={changehanlder} />
+                                {questions.answers.c}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </template>
-            <lightning-button variant="brand"   
-            label="Sumbit" 
-            title="Reset" onclick={SubmitHandler} 
-            disabled={disableHandle} class="slds-m-left_x-small">
-            </lightning-button>
-            <lightning-button variant="brand" 
-            label="Reset" 
-            title="Reset" onclick={ResetHanlder} class="slds-m-left_x-small">
-            </lightning-button>
-            <template if:true={Reviewhanlder}>    
-                <div class={isScoredFull}>You have Scored {correctanwser} out of {questions.length}</div>
-            </template>
+                </template>
+                <lightning-button
+                    variant="brand"
+                    label="Sumbit"
+                    title="Reset"
+                    onclick={SubmitHandler}
+                    disabled={disableHandle}
+                    class="slds-m-left_x-small"
+                >
+                </lightning-button>
+                <lightning-button
+                    variant="brand"
+                    label="Reset"
+                    title="Reset"
+                    onclick={ResetHanlder}
+                    class="slds-m-left_x-small"
+                >
+                </lightning-button>
+                <template if:true={Reviewhanlder}>
+                    <div class={isScoredFull}>You have Scored {correctanwser} out of {questions.length}</div>
+                </template>
             </form>
         </div>
     </lightning-card>
-
 </template>

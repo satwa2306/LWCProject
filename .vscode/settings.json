@@ -1,10 +1,14 @@
 {
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/.sf": true,
-    "**/.sfdx": true
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSaveTimeout": 5000,
+  "[apex]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "xml.preferences.showSchemaDocumentationType": "none",
-  "salesforce.agentforceVibesAutocomplete.enableAutocompletions": true
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

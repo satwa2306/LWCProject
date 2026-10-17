@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Parent to Child Communication - Non-Primitive">
+        <div class="slds-var-p-around_medium">
+            <lightning-carousel disable-auto-scroll>
+                <template for:each={casorsoldetails} for:item="casouls">
+                    <lightning-carousel-image
+                        key={casouls.id}
+                        src={casouls.src}
+                        header={casouls.header}
+                        description={casouls.description}
+                        alternative-text={casouls.alternativetext}
+                    >
+                    </lightning-carousel-image>
+                </template>
+            </lightning-carousel>
+        </div>
+    </lightning-card>
+</template>

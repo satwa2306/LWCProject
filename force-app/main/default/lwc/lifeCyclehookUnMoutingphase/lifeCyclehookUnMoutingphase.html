@@ -1,27 +1,27 @@
 <template>
     <lightning-card>
-        <div>
-            Hello from parent
-        </div>
-
+        <div>Hello from parent</div>
 
         <template if:true={showchild}>
-        <c-childlifecycle></c-childlifecycle>
+            <c-childlifecycle></c-childlifecycle>
         </template>
         <template if:false={showchild}>
-        <lightning-button label="Show Child" 
-          title="Non-primary action" 
-          onclick={handleClick} 
-          class="slds-m-left_x-small">
-        </lightning-button>
+            <lightning-button
+                label="Show Child"
+                title="Non-primary action"
+                onclick={handleClick}
+                class="slds-m-left_x-small"
+            >
+            </lightning-button>
         </template>
         <template if:true={showchild}>
-        <lightning-button label="Remove Child" 
-          title="Non-primary action" 
-          onclick={handleClick} 
-          class="slds-m-left_x-small">
-        </lightning-button>
+            <lightning-button
+                label="Remove Child"
+                title="Non-primary action"
+                onclick={handleClick}
+                class="slds-m-left_x-small"
+            >
+            </lightning-button>
         </template>
-
     </lightning-card>
 </template>

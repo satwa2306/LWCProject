@@ -1,0 +1,24 @@
+<template>
+    <c-p2c-altert-component
+        message="hurray i got It"
+        title="Parent ot child using primitive data"
+        number="20"
+        is-valid
+    ></c-p2c-altert-component>
+    <div class="slds-var-m-bottom_medium"></div>
+    <c-p2c-carouselcomponent casorsoldetails={carouselDetails}> </c-p2c-carouselcomponent>
+
+    <lightning-input type="number" label="Enter percent" onkeyup={handlerkey} value={val}></lightning-input>
+
+    <c-p2c-progress-component progressvalue={val}></c-p2c-progress-component>
+
+    <lightning-button
+        variant="brand"
+        label="Brand"
+        title="Primary action"
+        onclick={handleClick}
+        class="slds-m-left_x-small"
+    ></lightning-button>
+
+    <c-p2c-slider-component></c-p2c-slider-component>
+</template>

@@ -1,25 +1,26 @@
 <template>
-        
-    <lightning-card  title="conditional renderining">
-    <div class="slds-var-m-around_medium">
-    <lightning-button variant="brand" label="Press it" title="Press it" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <lightning-card title="conditional renderining">
+        <div class="slds-var-m-around_medium">
+            <lightning-button
+                variant="brand"
+                label="Press it"
+                title="Press it"
+                onclick={handleClick}
+                class="slds-m-left_x-small"
+            ></lightning-button>
 
-        <template if:true={con}>
-        <div>hurray welcome to LWC project</div>
-        </template>
-        
-    
-    </div>   
-     </lightning-card>   
+            <template if:true={con}>
+                <div>hurray welcome to LWC project</div>
+            </template>
+        </div>
+    </lightning-card>
 
-<lightning-card  title="condition">
-    <div class="slds-var-m-around_medium">
-  
-    <lightning-input type="text" label="Enter Name" onkeyup={checkHandler}></lightning-input>
-    <template if:true={hellomethod}>
-     <div>Hello you have retun hello corretly BYE</div>
-     </template>
-     
-     </div>
-</lightning-card>
+    <lightning-card title="condition">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" label="Enter Name" onkeyup={checkHandler}></lightning-input>
+            <template if:true={hellomethod}>
+                <div>Hello you have retun hello corretly BYE</div>
+            </template>
+        </div>
+    </lightning-card>
 </template>

@@ -1,21 +1,13 @@
 h2 {
-
-color: rgb(244, 244, 248);
-background-color: blue;
-
-
-
+    color: rgb(244, 244, 248);
+    background-color: blue;
 }
 
-.hello{
-
-color: rgb(244, 244, 248);
-background-color: blue;
-
+.hello {
+    color: rgb(244, 244, 248);
+    background-color: blue;
 }
-.hello:hover{
-
-color: rgb(244, 244, 248);
-background-color: rgb(191, 25, 63);
-
+.hello:hover {
+    color: rgb(244, 244, 248);
+    background-color: rgb(191, 25, 63);
 }
