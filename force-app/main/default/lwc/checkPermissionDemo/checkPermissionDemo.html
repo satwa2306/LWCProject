@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Check User Permissions">
+        <div class="slds-var-p-around_medium">
+            <p>
+                <strong>View All Data Permission:</strong>
+                <template if:true={hasViewAllData}>
+                    <span class="slds-text-color_success">Granted</span>
+                </template>
+                <template if:false={hasViewAllData}>
+                    <span class="slds-text-color_error">Not Granted</span>
+                </template>
+            </p>
+
+            <div class="slds-var-m-top_medium">
+                <strong>Custom Permission (show_all):</strong>
+                <template if:true={hasShowAllPermission}>
+                    <span class="slds-text-color_success">Granted</span>
+                </template>
+                <template if:false={hasShowAllPermission}>
+                    <span class="slds-text-color_error">Not Granted</span>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

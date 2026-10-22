@@ -10,5 +10,10 @@
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "fileheader.Author": "Kongara Satwalekar",
+  "fileheader.LastModifiedBy": "Kongara Satwalekar",
+  "fileheader.tpl": "/*\r\n * @Author: {author} \r\n * @Description: Primary module developer responsible for implementation. \r\n * @Date: {createTime} \r\n * @Last Modified By: {lastModifiedBy} \r\n * @Last Modified Time: {updateTime} \r\n * @Recent Changes: \r\n */\r\n",
+  "xml.preferences.showSchemaDocumentationType": "none"
 }
+

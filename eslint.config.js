@@ -12,18 +12,36 @@ module.exports = defineConfig([
         extends: [...auraConfig.configs.recommended, ...auraConfig.configs.locker]
     },
 
+    // Aura controller ESLint overrides
+    {
+        files: ['**/aura/**/*Controller.js'],
+        rules: {
+            'no-unused-expressions': 'off',
+            'no-unused-vars': [
+                'error',
+                {
+                    args: 'none'
+                }
+            ]
+        }
+    },
+
     // LWC configuration
     {
         files: ['**/lwc/**/*.js'],
-        extends: [lwcConfig]
+        extends: [lwcConfig],
+        rules: {
+            'no-unused-vars': 'off'
+        }
     },
 
-    // LWC configuration with override for LWC test files
+    // LWC test files
     {
         files: ['**/lwc/**/*.test.js'],
         extends: [lwcConfig],
         rules: {
-            '@lwc/lwc/no-unexpected-wire-adapter-usages': 'off'
+            '@lwc/lwc/no-unexpected-wire-adapter-usages': 'off',
+            'no-unused-vars': 'off'
         },
         languageOptions: {
             globals: {

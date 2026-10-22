@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="LDS lightning record FORM">
+        <lightning-record-form
+            object-api-name={Object}
+            fields={fieldslist}
+            onsuccess={successhandler}
+        ></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="LDS lightning record FORM with recordid viewmode">
+        <lightning-record-form
+            object-api-name={Object}
+            record-id="001cb00001QUqJRAA1"
+            fields={fieldslist}
+            onsuccess={successhandler}
+        ></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="LDS lightning record FORM readonly">
+        <lightning-record-form
+            object-api-name={Object}
+            record-id="001cb00001QUqJRAA1"
+            fields={fieldslist}
+            onsuccess={successhandler}
+            mode="readonly"
+        ></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="LDS lightning record FORM edit mode">
+        <lightning-record-form
+            object-api-name={Object}
+            record-id="001cb00001QUqJRAA1"
+            fields={fieldslist}
+            onsuccess={successhandler}
+            columns="2"
+            mode="edit"
+        ></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="Edit record with layout using lightning-record-form">
+        <lightning-record-form
+            record-id="001N000001zcknoIAA"
+            object-api-name={objectName}
+            mode="edit"
+            columns="2"
+            layout-type="Compact"
+        ></lightning-record-form>
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <lightning-card
+        title="lightningRecordEDITFORM With edit recorid and reset and custom label"
+        icon-name="standard:account"
+        variant="base"
+    >
+        <lightning-record-edit-form object-api-name={objectapi} record-id="003cb00000nmgn7AAA">
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name={fields.LAST_NAME}></lightning-input-field>
+            <lightning-input-field field-name={fields.FIRST_NAME}></lightning-input-field>
+            <label class="slds-var-p-left_x-small">Enter Email</label>
+            <lightning-input-field variant="label-hidden" field-name={fields.EMAIL}></lightning-input-field>
+            <lightning-input-field field-name={fields.DESCRIP}></lightning-input-field>
+            <lightning-input-field field-name={fields.ACCOUNT_ID}></lightning-input-field>
+            <lightning-button
+                class="slds-var-m-around_XX-small"
+                variant="neutral"
+                label="Cancel"
+                onclick={Handleclick}
+            ></lightning-button>
+            <lightning-button
+                class="slds-var-m-around_XX-small"
+                variant="brand"
+                label="Save"
+                type="submit"
+            ></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

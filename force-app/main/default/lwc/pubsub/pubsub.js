@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const store = {};
 /**
  * subscribers a callback for an event
